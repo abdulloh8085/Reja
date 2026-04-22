@@ -1,0 +1,20 @@
+{
+"name": "steve",
+"profession":"Software engineer",
+"age":21,
+"residence": "S.Korea",
+"adress": "S.Korea, Busan", 
+"languages": ["Uzbek", "Korean", "English"],
+"skills": ["html","css", "Js", "Node JS", "Python"], 
+"extra skills": [ "bootstap, Materialize", "Styling Sass", "Django,  flask", "Git Knowledges"],
+"work_place": "IT company", 
+"service desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta obcaecati blanditiis nobis. Tenetur, iste enim. Accusantium necessitatibus repellendus at ea?", 
+"about_me": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta obcaecati blanditiis nobis. Tenetur, iste enim. Accusantium necessitatibus repellendus at ea?", 
+"city" :"denau", 
+"title":["flower", "seedlings", "gardner", "Old", "new"], 
+"flower_desc": ["What is a flower?", "What is a Seedling?", "Who is a gardner ?"], 
+"flower_name": ["tulip", "Daffodil", "Poppy", "sunflower", "bluebell", "rose", "snowdrop", "Cherry blossom"], 
+"flower_price": ["15", "25", "12", "20", "35", "30", "22", "19", "9"], 
+"famous_words": ["World is beautiful with Flowers"], 
+"famous_name": ["Steve JOBS"]
+}
