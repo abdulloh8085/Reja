@@ -16,11 +16,20 @@ app.set("view engine", "ejs");
 
 
 //4 Routing code lar yoziladi
-app.get("/hello", function(req, res) {
-    res.end("<h1>Hello World by Lincoln</h1>");
+// app.get("/hello", function(req, res) {
+//     res.end("<h1>Hello World by Lincoln</h1>");
+// });
+// app.get("/Gift", function(req, res) {
+//     res.end("<h1> Siz sovgalar saxifasidasiz!</h1>");
+// });
+
+app.post("/create-item", (req,res) => {
+    console.log(req.body);
+    res.json({test: "success!"});
 });
-app.get("/Gift", function(req, res) {
-    res.end("<h1> Siz sovgalar saxifasidasiz!</h1>");
+
+app.get("/", function (req, res) {
+    res.render("harid");
 });
 const server = http.createServer(app);
 let PORT = 3000;
