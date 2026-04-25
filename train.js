@@ -14,7 +14,7 @@ function berilganharflarnisanash(harf, soz) {
 }
 
 app.get("/", (req, res) => {
-    const result = berilganharflarnisanash("a", "Software engineer");
+    const result = berilganharflarnisanash("o", "Salom mening ismim Odiljon, Yoshim 45da, Koreya yeongcheon shaxrida istiqomat qilaman, O'zbekman.");
     res.send(`Natija: ${result}`);
 });
 
@@ -22,3 +22,4 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
 console.log("Natijani shu saytdan ko'rishingiz mumkun!!! http://localhost:3000");
 });
+
