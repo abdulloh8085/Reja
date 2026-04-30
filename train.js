@@ -1,5 +1,24 @@
 const express = require("express");
 const app = express();
+
+// ===========================================
+// Mitask *B*
+// ===========================================
+
+function getNumberCount(text) {
+  let digitsCount = 0;
+
+  for (let char of text) {
+    if (!isNaN(char) && char !== " ") {
+      digitsCount++;
+    }
+  }
+
+  return digitsCount;
+}
+
+console.log(getNumberCount("Abdulloh ID 2026043019"));
+
 // =========================================== //
 // MiTask *A*
 // ========================================== //
