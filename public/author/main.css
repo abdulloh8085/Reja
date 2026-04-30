@@ -1,0 +1,349 @@
+.main_frame {
+  position: relative; display: flex; flex-direction: row; width: 1440px; min-height: 1315px; margin: 0 auto; background-color: #f0f0f6;
+}
+
+/* LEFT FRAME (The Sidebar) */
+
+.left_frame {
+  position: relative; width: 305px; height: 1315px; background-color: #ffffff;
+}
+
+.left_frame .profile_container {
+  position: relative; width: 228px; width: 305px; height: 253px; height: 1315px; margin: 40px auto 25px auto; background-color: #ffffff;
+}
+
+/* --- PROFILE CONTAINER --- */
+
+.left_frame .profile_container {
+  position: relative; display: flex; flex-direction: column; align-items: center; width: 228px; height: 253px; margin: 40px auto 25px auto; background-color: #ffffff;
+}
+
+/* --- PROFILE IMAGE --- */
+
+.left_frame .profile_img_box {
+  position: relative; display: flex; justify-content: center; width: 156.16px; height: 150px; margin-bottom: 15px;
+}
+
+.left_frame .profile_img_box img {
+  position: relative; width: 150px; height: 150px; border: 2px solid #f0f0f6; border-radius: 50%; object-fit: cover;
+}
+
+/* --- NAME Frame  --- */
+
+.left_frame .profile_name {
+  position: relative; display: flex; align-items: center; width: 64px; height: 20.85px; margin-bottom: 8px; font-family: "Inter"; font-size: 18px; font-weight: 500; font-style: normal; line-height: 123.6%; text-transform: capitalize; color: #2b2b2b;
+}
+
+.left_frame .profile_job {
+  position: relative; width: 147.84px; height: 24.31px; margin-bottom: 15px; font-family: "Inter"; font-size: 15px; font-weight: 400; font-style: normal; line-height: 24px; text-align: center; text-transform: capitalize; color: #767676;
+}
+
+.left_frame .social_icons_row {
+  position: relative; display: flex; justify-content: center; gap: 15px; width: 228px; height: 22px;
+}
+
+.left_frame .social_icon {
+  position: relative; display: flex; justify-content: center; align-items: center; width: 24.99px; height: 21.61px; border-radius: 50%; font-size: 12px; color: #2b2b2b; background-color: #ffb400;
+}
+
+.left_frame .line_6 {
+  position: relative; width: 220px; height: 0px; border: 1.5px solid #f0f0f6; margin: 0 auto;
+}
+
+/* --- ABOUT SECTION WRAPPER --- */
+
+.left_frame .about_container {
+  position: relative; width: 221px;
+
+  /* From your Figma "About" spec */
+  height: auto;
+
+  /* Let it grow with content */
+  display: flex; display: flex; flex-direction: column; flex-direction: column; gap: 9px; width: 221px; height: auto; margin: 20px auto; margin: 20px auto;
+}
+
+/* --- THE ROW --- */
+
+.left_frame .about_row {
+  position: relative; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 25px;
+}
+
+.left_frame .about_label {
+  position: relative; font-family: "Inter"; font-size: 15px; font-weight: 400; font-style: normal; line-height: 24px; text-transform: capitalize;
+}
+
+/* --- THE DIVIDER LINE --- */
+
+.left_frame .line_3 {
+  position: relative; width: 220px; height: 0px; border: 1.5px solid #f0f0f6; margin: 20px auto;
+}
+
+/* --- LANGUAGES CONTAINER --- */
+
+.left_frame .languages_container {
+  position: relative; display: flex; flex-direction: column; gap: 15px; width: 220px; margin: 25px auto;
+
+  /* Spacing between Uzbek, Korean, and English rows */
+}
+
+.left_frame .languages_title {
+  position: relative; margin-bottom: 5px; font-family: "Inter", sans-serif; font-size: 18px; font-weight: 500; text-align: left; color: #2b2b2b;
+}
+
+.left_frame .lang_info {
+  position: relative; display: flex; justify-content: space-between; margin-bottom: 5px;
+}
+
+.left_frame .lang_name,
+.lang_percent {
+  font-family: "Inter", sans-serif; font-size: 15px; color: #767676;
+}
+
+.left_frame .lang_bar_wrapper {
+  position: relative; box-sizing: border-box; width: 100%; height: 5px; padding: 1px; border: 1.5px solid #ffb400; border-radius: 10px; background: #ffffff;
+}
+
+.left_frame .lang_bar_wrapper {
+  position: relative; box-sizing: border-box; width: 100%; height: 4px; padding: 1px; border: 1.5px solid #ffb400; border-radius: 10px; background: #ffffff;
+}
+
+.left_frame .lang_bar_fill {
+  position: relative; height: 100%; border-radius: 10px; background: #ffb400;
+}
+
+/* --- DIVIDER LINE 4 --- */
+
+.left_frame .line_4 {
+  position: relative; width: 220px; height: 0px; border: 1.5px solid #f0f0f6; margin: 20px auto;
+}
+
+/* --- Skill section boshlanishi --- */
+
+.left_frame .skills_container {
+  position: relative; display: flex; flex-direction: column; gap: 15px; width: 220px; margin: 25px auto;
+}
+
+.left_frame .skills_title {
+  position: relative; margin-bottom: 5px; font-family: "Inter", sans-serif; font-size: 18px; font-weight: 500; text-align: left; color: #2b2b2b;
+}
+
+.left_frame .skill_item {
+  position: relative; width: 100%;
+}
+
+.left_frame .skill_info {
+  position: relative; display: flex; justify-content: space-between; margin-bottom: 5px;
+}
+
+.left_frame .skill_name,
+.skill_percent {
+  font-family: "Inter", sans-serif; font-size: 15px; color: #767676;
+}
+
+.left_frame .skill_bar_wrapper {
+  position: relative; box-sizing: border-box; width: 100%; height: 4px; padding: 1px; border: 1.5px solid #ffb400; border-radius: 10px; background: #ffffff;
+}
+
+.left_frame .skill_bar_fill {
+  position: relative; height: 100%; border-radius: 10px; background: #ffb400;
+}
+
+/* --- DIVIDER LINE 5 --- */
+
+.left_frame.line_5 {
+  position: relative; width: 220px; height: 0px; border: 1.5px solid #f0f0f6; margin: 20px auto;
+}
+
+/* --- EXTRA SKILLS SECTION --- */
+
+.left_frame .extra_skills_container {
+  position: relative; display: flex; flex-direction: column; width: 186px; height: auto; margin: 25px auto;
+}
+
+.left_frame .extra_skills_title {
+  position: relative; width: 95px; height: 22px; margin-bottom: 10px; font-family: "Inter"; font-size: 18px; font-weight: 500; line-height: 123.6%; text-transform: capitalize; color: #2b2b2b;
+}
+
+.left_frame.extra_skill_item {
+  display: flex; align-items: center; gap: 15px;
+}
+
+.left_frame .extra_icon {
+  gap: 15px; width: 15px;
+}
+
+.left_frame .extra_icon {
+  width: 15px; height: 15px; object-fit: contain;
+}
+
+.left_frame.extra_skill_text {
+  font-family: "Inter"; font-size: 15px; font-weight: 400; line-height: 24px; text-transform: capitalize; color: #767676; font-feature-settings: "calt" off,
+    "kern" off;
+}
+
+.left_frame .line_6 {
+  position: relative; width: 220px; height: 0px; border: 1.5px solid #f0f0f6; margin: 20px auto;
+}
+
+.middle_frame {
+  position: relative; display: flex; overflow-y: auto; flex: 1; flex-direction: column; align-items: center; padding: 20px 0; background-color: #f0f0f6;
+}
+
+.middle_frame .main_menu_container {
+  position: relative; overflow: hidden; width: 971px; height: 463px; margin: 0 auto; margin-bottom: 40px; background: #ffffff;
+}
+
+.hero_text_content {
+  position: absolute; top: 93px; left: 60px; z-index: 11; display: flex; flex-direction: column; align-items: flex-start; align-items: flex-start; width: 500px;
+}
+
+.middle_frame .hero_main_title {
+  position: relative; margin: 0 0 15px 0; font-family: "Inter"; font-size: 48px; font-weight: 700; line-height: 1.2; color: #2b2b2b;
+}
+
+.middle_frame .yellow_text {
+  color: #ffb400;
+}
+
+.middle_frame .hero_sub_paragraph {
+  position: relative; width: 424px; margin: 0 0 25px 0; font-family: "Inter"; font-size: 16px; line-height: 24px; color: #767676;
+}
+
+.middle_frame .hire_me_button {
+  position: relative; display: flex; justify-content: center; align-items: center; gap: 10px; width: 154px; height: 51px; border: none; border-radius: 5px; background: #ffb400; cursor: pointer;
+}
+
+.middle_frame .btn_icon {
+  width: 16px; height: auto;
+}
+
+/* --- IMAGE & SHAPES --- */
+
+.middle_frame .hero_person_img {
+  position: absolute; bottom: 0%; left: 60.07%; z-index: 5;
+}
+
+.middle_frame .steve_large {
+  display: block; height: 450px;
+}
+
+.middle_frame .shape {
+  position: absolute; box-sizing: border-box;
+}
+
+.middle_frame .ellipse_12 {
+  top: 12.8%; left: 53.2%; width: 16px; height: 16px; border: 2px solid rgba(5, 255, 0, 0.8); border-radius: 50%;
+}
+
+.middle_frame .ellipse_16 {
+  top: 90.53%; left: 8.66%; width: 16px; height: 16px; border: 2px solid rgba(5, 255, 0, 0.8); border-radius: 50%;
+}
+
+.middle_frame .ellipse_13 {
+  top: 81.7%; left: 57.1%; width: 16px; height: 16px; border: 2px solid rgba(255, 180, 0, 0.8); border-radius: 50%;
+}
+
+.middle_frame .ellipse_15 {
+  top: 8.18%; left: 3.71%; width: 16px; height: 16px; border: 2px solid rgba(255, 180, 0, 0.8); border-radius: 50%;
+}
+
+.middle_frame .rect_51 {
+  top: 16.51%; left: 91.9%; width: 14px; height: 14px; border: 2px solid rgba(255, 180, 0, 0.8); transform: rotate(25deg);
+}
+
+.middle_frame .poly_1 {
+  top: 91.58%; left: 94.54%; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); width: 12px; height: 12px; border: 2px solid rgba(255, 46, 0, 0.8);
+}
+
+/* --- servise frame boshlanish qism--- */
+
+.middle_frame .services_container {
+  position: relative; display: flex; flex-direction: column; align-items: center; width: 970px; padding-bottom: 50px; margin: 0 auto;
+}
+
+.middle_frame .services_header {
+  margin-bottom: 50px; text-align: center;
+}
+
+.middle_frame .services_title {
+  margin-bottom: 25px; font-family: "Inter"; font-size: 32px; font-weight: 700; color: #2b2b2b;
+}
+
+.middle_frame .services_subtitle {
+  width: 438px; font-family: "Inter"; font-size: 15px; line-height: 24px; color: #767676;
+}
+
+/* --- GRID & CARDS --- */
+
+.middle_frame .services_grid {
+  display: grid; grid-template-columns: repeat(3, 310px); gap: 20px;
+}
+
+.middle_frame .service_card {
+  display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box; width: 310px; height: 225px; padding: 20px; background: #ffffff;
+}
+
+.middle_frame .service_icon {
+  width: 68px; height: 68px; margin-bottom: 15px;
+}
+
+.middle_frame .service_card h4 {
+  margin-bottom: 10px; font-family: "Inter"; font-size: 18px; font-weight: 500; text-transform: capitalize; color: #2b2b2b;
+}
+
+.middle_frame .service_card p {
+  font-family: "Inter"; font-size: 15px; line-height: 24px; text-align: center; color: #767676;
+}
+
+.middle_frame .order_link {
+  margin-top: 8px; font-family: "Inter"; font-size: 12px; font-weight: 700; text-decoration: none; color: #ffb400;
+}
+
+.right_frame {
+  display: flex; flex-direction: column; align-items: center; width: 108px; min-height: 1315px; padding-top: 50px; background: #fafafa; box-shadow: 4px 0px 10px rgba(47, 122, 249, 0.1);
+}
+
+.contrast_icon {
+  width: 30px; height: 30px; margin-bottom: 174px; cursor: pointer;
+}
+
+.contrast_icon img {
+  width: 100%;
+}
+
+.side_menu {
+  display: flex; flex-direction: column; gap: 43px;
+}
+
+.nav_group {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+}
+
+.nav_item {
+  display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; transition: 0.3s ease;
+}
+
+.circle_yellow {
+  background: #ffb400;
+}
+
+.circle_gray {
+  background: #f0f0f6;
+}
+
+.nav_item img {
+  width: 18px; height: auto;
+}
+
+.tooltip {
+  padding: 5px 12px; border-radius: 4px; margin-bottom: 8px; font-family: "Inter"; font-size: 12px; font-weight: 500; white-space: nowrap; color: #ffffff; background: #2b2b2b; opacity: 0; transition: 0.3s;
+}
+
+.nav_group.active .tooltip,
+.nav_group:hover .tooltip {
+  opacity: 1;
+}
+
+.nav_item:hover {
+  background: #ffb400;
+}

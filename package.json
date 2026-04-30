@@ -8,6 +8,7 @@
     "dev": "nodemon server.js",
     "train": "nodemon train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "Lincoln & MIT",
   "license": "ISC",

@@ -2,263 +2,304 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcos Portfolio</title>
-    <link rel="stylesheet" href="/main.css">
-</head>
-<body>
- 
-<div class="wrapper">
- 
-    <!-- ===== chap taraf sidebar ===== -->
-    <div class="sidebar">
- 
-        <div class="profile-box">
-            <div class="profile-img">
-                <img src="/public/author/images/Your Image 1.png" alt="profile">
-            </div>
-            <h3>Marcos</h3>
-            <span>Heart</span>
- 
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-            </div>
-        </div>
- 
-        <!-- personal info -->
-        <div class="info-list">
-            <div class="info-item">
-                <label>Age:</label>
-                <p>24</p>
-            </div>
-            <div class="info-item">
-                <label>Residence:</label>
-                <p>BD</p>
-            </div>
-            <div class="info-item">
-                <label>Freelance:</label>
-                <p class="green-text">Available</p>
-            </div>
-            <div class="info-item">
-                <label>Address:</label>
-                <p>Dhaka,Bangladesh</p>
-            </div>
-        </div>
- 
-        <h4 class="bar-title">Languages</h4>
- 
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>Bangla</span>
-                <span>100%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 100%"></div>
-            </div>
-        </div>
- 
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>English</span>
-                <span>80%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 80%"></div>
-            </div>
-        </div>
- 
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>Spanish</span>
-                <span>60%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 60%"></div>
-            </div>
-        </div>
- 
-        <h4 class="bar-title">Skills</h4>
- 
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>Html</span>
-                <span>90%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 90%"></div>
-            </div>
-        </div>
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>CSS</span>
-                <span>85%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 85%"></div>
-            </div>
-        </div>
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>Js</span>
-                <span>80%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 80%"></div>
-            </div>
-        </div>
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>PHP</span>
-                <span>75%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 75%"></div>
-            </div>
-        </div>
-        <div class="bar-wrap">
-            <div class="bar-top">
-                <span>WordPress</span>
-                <span>85%</span>
-            </div>
-            <div class="bar-bg">
-                <div class="bar-fill" style="width: 85%"></div>
-            </div>
-        </div>
- 
-        <h4 class="bar-title">Extra Skills</h4>
-        <ul class="extra-list">
-            <li><i class="fas fa-square"></i> Bootstrap, Materialize</li>
-            <li><i class="fas fa-square"></i> Stylus, Sass, Less</li>
-            <li><i class="fas fa-square"></i> Gulp, Webpack, Grunt</li>
-            <li><i class="fas fa-square"></i> GIT Knowledge</li>
-        </ul>
- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/author/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="frame">
+<div class="main_frame">
+    <div class="left_frame">
+      <div class="profile_container">
+    <div class="profile_img_box">
+        <img src="/author/images/Profile.png" alt="<%= user.name %>">
+        <div class="status_indicator"></div>
     </div>
-    <!-- Sidebar Tugashi-->
- 
- 
-    <!-- ===== main area ===== -->
-    <div class="main">
- 
-        <!-- hero -->
-        <div class="hero-section">
- 
-            <!-- decorative dots/shapes -->
-            <span class="dot d1"></span>
-            <span class="dot d2"></span>
-            <span class="dot d3"></span>
-            <span class="dot d4"></span>
-            <span class="dot d5"></span>
-            <span class="tri t1"></span>
-            <span class="dia dia1"></span>
- 
-            <div class="hero-text">
-                <h1>Doctor neurologists<br>in OHSU Hospital</h1>
-                <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing
-                    Elit. Et, Volutpat Feugiat Placerat Lobortis. Natoque
-                    Rutrum Semper Sed Suspendisse Nunc Lectus.</p>
-                <a href="#" class="hire-btn">HIRE ME &nbsp;&#8594;</a>
-            </div>
- 
-            <div class="hero-img">
-                <img src="/public/author/images/Your Image 1.png" alt="doctor">
-            </div>
- 
-        </div>
- 
- 
-        <!-- servis qism -->
-        <div class="services-section">
- 
-            <h2>My Services</h2>
-            <p class="srv-sub">Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor<br>
-                Do Amet Sint. Velit Officia Consequat Duis Enim Velit Mollit.<br>
-                Lorem Ipsum</p>
- 
-            <div class="cards-grid">
- 
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Blog, E-Commerce</p>
-                </div>
- 
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Mobile App, Website Design</p>
-                </div>
- 
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <h3>Sound Design</h3>
-                    <p>Voice Over, Beat Making</p>
-                </div>
- 
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Game Design</h3>
-                    <p>Character Design, Props & Objects</p>
-                </div>
- 
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3>Photography</h3>
-                    <p>Portrait, Product Photography</p>
-                </div>
- 
-                <!--  -->
-                <div class="card-adv">
-                    <h3>Advertising</h3>
-                    <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae
-                    Nulla Diam In Ac Dictum A Urna Viverra Morbi.</p>
-                    <a href="#">ORDER NOW &#8594;</a>
-                </div>
- 
-            </div>
-        </div>
- 
+
+    <div class="profile_name"><%= user.name %></div>
+
+    <div class="profile_job"><%= user.profession %></div>
+
+    <div class="social_icons_row">
+        <div class="social_icon"><i class="fa fa-facebook"></i></div>
+        <div class="social_icon"><i class="fa fa-instagram"></i></div>
+        <div class="social_icon"><i class="fa fa-twitter"></i></div>
+        <div class="social_icon"><i class="fa fa-linkedin"></i></div>
+        <div class="social_icon"><i class="fa fa-youtube"></i></div>
+        <div class="social_icon"><i class="fa fa-dribbble"></i></div>
     </div>
-    <!-- end main -->
- 
- 
-    <!-- right side nav -->
-    <div class="right-nav">
-        <div class="rightnav-top">
-            <i class="fas fa-circle-half-stroke"></i>
-        </div>
- 
-        <ul>
-            <li class="active">
-                <span class="tooltip-label">Home</span>
-                <i class="fas fa-house"></i>
-            </li>
-            <li><i class="fas fa-code"></i></li>
-            <li><i class="fas fa-user"></i></li>
-            <li><i class="fas fa-briefcase"></i></li>
-            <li><i class="fas fa-grip"></i></li>
-            <li><i class="fas fa-comment-dots"></i></li>
-        </ul>
-    </div>
- 
 </div>
- 
-</body>
+<div class="line_6"></div>
+<div class="about_container">
+    <div class="about_row">
+        <div class="about_label">Age:</div>
+        <div class="about_value"><%= user.age %></div>
+    </div>
+
+    <div class="about_row">
+        <div class="about_label">Residence:</div>
+        <div class="about_value"><%= user.residence %></div>
+    </div>
+
+    <div class="about_row">
+        <div class="about_label">Freelance:</div>
+        <div class="about_value status_available">Available</div>
+    </div>
+
+    <div class="about_row">
+        <div class="about_label">Address:</div>
+        <div class="about_value"><%= user.adress %></div>
+    </div>
+</div>
+
+<div class="line_3"></div>
+<div class="languages_container">
+    <div class="languages_title">Languages</div>
+
+    <div class="lang_item">
+        <div class="lang_info">
+            <span class="lang_name">Uzbek</span>
+            <span class="lang_percent">100%</span>
+        </div>
+        <div class="lang_bar_wrapper">
+            <div class="lang_bar_fill" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <div class="lang_item">
+        <div class="lang_info">
+            <span class="lang_name">Korean</span>
+            <span class="lang_percent">60%</span>
+        </div>
+        <div class="lang_bar_wrapper">
+            <div class="lang_bar_fill" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <div class="lang_item">
+        <div class="lang_info">
+            <span class="lang_name">English</span>
+            <span class="lang_percent">90%</span>
+        </div>
+        <div class="lang_bar_wrapper">
+            <div class="lang_bar_fill" style="width: 100%;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="line_4"></div>
+<div class="skills_container">
+    <div class="skills_title">Skills</div>
+
+    <div class="skill_item">
+        <div class="skill_info">
+            <span class="skill_name">Html</span>
+            <span class="skill_percent">90%</span>
+        </div>
+        <div class="skill_bar_wrapper">
+            <div class="skill_bar_fill" style="width: 90%;"></div>
+        </div>
+    </div>
+
+    <div class="skill_item">
+        <div class="skill_info">
+            <span class="skill_name">Css</span>
+            <span class="skill_percent">85%</span>
+        </div>
+        <div class="skill_bar_wrapper">
+            <div class="skill_bar_fill" style="width: 85%;"></div>
+        </div>
+    </div>
+
+    <div class="skill_item">
+        <div class="skill_info">
+            <span class="skill_name">Js</span>
+            <span class="skill_percent">80%</span>
+        </div>
+        <div class="skill_bar_wrapper">
+            <div class="skill_bar_fill" style="width: 80%;"></div>
+        </div>
+    </div>
+
+    <div class="skill_item">
+        <div class="skill_info">
+            <span class="skill_name">NodeJS</span>
+            <span class="skill_percent">75%</span>
+        </div>
+        <div class="skill_bar_wrapper">
+            <div class="skill_bar_fill" style="width: 75%;"></div>
+        </div>
+    </div>
+
+    <div class="skill_item">
+        <div class="skill_info">
+            <span class="skill_name">Python</span>
+            <span class="skill_percent">85%</span>
+        </div>
+        <div class="skill_bar_wrapper">
+            <div class="skill_bar_fill" style="width: 70%;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="line_5"></div>
+<div class="extra_skills_container">
+    <div class="extra_skills_title">Extra Skills</div>
+
+    <div class="extra_skill_item">
+        <img src="/author/icon/Icons.png" alt="ERR:401" class="extra_icon">
+        <span class="extra_skill_text">Bootstrap, Materialize</span>
+    </div>
+
+    <div class="extra_skill_item">
+       <img src="/author/icon/Icons.png" alt="ERR:401" class="extra_icon">
+        <span class="extra_skill_text">Stylus, Sass, Less</span>
+    </div>
+
+    <div class="extra_skill_item">
+       <img src="/author/icon/Icons.png" alt="ERR:401" class="extra_icon">
+        <span class="extra_skill_text">Gulp, Webpack, Grunt</span>
+    </div>
+
+    <div class="extra_skill_item">
+       <img src="/author/icon/Icons.png" alt="ERR:401" class="extra_icon">
+        <span class="extra_skill_text">GIT Knowledge</span>
+    </div>
+</div>
+
+<div class="line_6"></div>
+        </div>
+
+   <div class="middle_frame">
+    <div class="main_menu_container">
+        <div class="shape ellipse_12"></div>
+        <div class="shape ellipse_16"></div>
+        <div class="shape ellipse_13"></div>
+        <div class="shape ellipse_15"></div>
+        <div class="shape rect_51"></div>
+        <div class="shape poly_1"></div>
+
+        <div class="main_menu_container">
+    <div class="hero_text_content">
+        <h1 class="hero_main_title">SOFTWARE ENGINEER...</h1>
+        <p class="hero_sub_paragraph">Software engineers design, develop, test, and maintain software applications and computer systems, combining analytical thinking and problem-solving skills to create technology solutions across industries
+        </p>
+        <button class="hire_me_button">HIRE ME...</button>
+    </div>
+
+    <div class="hero_person_img">
+        <img src="/author/images/steve_large.png" class="steve_large">
+    </div>
+</div>
+    </div>
+
+    <section class="services_container">
+        <div class="services_header">
+            <h2 class="services_title">My Services</h2>
+            <p class="services_subtitle">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                Velit officia consequat duis enim velit mollit. lorem ipsum
+            </p>
+        </div>
+
+        <div class="services_grid">
+            <div class="service_card">
+                <img src="/author/images/icon/coding.png" alt="ERR:401" class="service_icon">
+                <h4>Web Development</h4>
+                <p>Blog, E-Commerce</p>
+            </div>
+
+            <div class="service_card">
+                <img src="/author/images/icon/illustration.png" alt="ERR:401" class="service_icon">
+                <h4>UI/UX Design</h4>
+                <p>Mobile App, Website Design</p>
+            </div>
+
+            <div class="service_card">
+                <img src="/author/images/icon/Microphone.png" alt="ERR:401" class="service_icon">
+                <h4>Sound Design</h4>
+                <p>Voice Over, Beat Making</p>
+            </div>
+
+            <div class="service_card">
+                <img src="/author/images/icon/game-development.png" alt="ERR:401" class="service_icon">
+                <h4>Game Design</h4>
+                <p>Character Design, Props & Objects</p>
+            </div>
+
+            <div class="service_card">
+                <img src="/author/images/icon/Photographer.png" alt="ERR:401" class="service_icon">
+                <h4>Photography</h4>
+                <p>Portrait, Product Photography</p>
+            </div>
+
+            <div class="service_card">
+
+                <h4>Advertising</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="order_link">ORDER NOW ></a>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <div class="right_frame">
+      <div class="right_frame">
+    <div class="contrast_icon">
+        <img src="/author/images/icon/Contrast.png" alt="ERR:401">
+    </div>
+
+    <nav class="side_menu">
+        <div class="nav_group active">
+            <div class="tooltip">Home</div>
+            <a href="#" class="nav_item circle_yellow">
+                <img src="/author/images/icon/Home.png" alt="ERR:401">
+            </a>
+        </div>
+
+        <div class="nav_group">
+            <a href="#" class="nav_item circle_gray">
+                <img src="/author/images/icon/service.png" alt="ERR:401">
+            </a>
+        </div>
+
+        <div class="nav_group">
+            <a href="#" class="nav_item circle_gray">
+                <img src="/author/images/icon/cv.png" alt="ERR:401">
+            </a>
+        </div>
+
+        <div class="nav_group">
+            <a href="#" class="nav_item circle_gray">
+                <img src="/author/images/icon/Portfolio.png" alt="ERR:401">
+            </a>
+        </div>
+
+        <div class="nav_group">
+            <a href="#" class="nav_item circle_gray">
+                <img src="/images/icon/Blog.png" alt="ERR:401">
+            </a>
+        </div>
+
+        <div class="nav_group">
+            <a href="#" class="nav_item circle_gray">
+                <img src="/author/icon/Contact.png" alt="ERR:401">
+            </a>
+        </div>
+    </nav>
+</div>
+        </div>
+</div>
+      </div>
+    </div>
+  </body>
 </html>

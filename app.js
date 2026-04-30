@@ -2,24 +2,25 @@ console.log('web server ishga tushdi');
 const express = require("express");
 const res = require("express/lib/response");
 const app = express();
+const http = require("http");
 
 const fs = require("fs");
 
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) => {
-//     if(err) { 
-//         console.log("ERROR:",  err);
-//     } else {
-//         user = JSON.parse(data)
-//     }
-// });
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+    if(err) { 
+        console.log("ERROR:",  err);
+    } else {
+        user = JSON.parse(data)
+    }
+});
 
 // Mongo DB connect 
 const db = require("./server").db();
 
 
 //1 Kirish codelar yoziladi
-app.use(express.static("public"));
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -39,8 +40,9 @@ app.set("view engine", "ejs");
 // });
 
 app.post("/create-item", (req, res) => {
-    console.log(req.body);
+    console.log("user entered /create-item");
     const new_reja = req.body.reja;
+
     db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
         if (err) {
     console.log(err);
@@ -52,9 +54,10 @@ app.post("/create-item", (req, res) => {
     });
 });
 
-// app.get('/author', (req, res) => {
-//     res.render("author", { user: user});
-// });
+app.get('/author', (req, res) => {
+    res.render("author", { user: user});
+}); 
+
 // app.get("/", function (req, res) {
 //     res.render("reja");
 // });
