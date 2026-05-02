@@ -1,91 +1,86 @@
-console.log("FrontEnd Js ishga tushdi");
+// 
+
+// BU Faqatgina Frontend uchun JS file
+console.log("Frontend Js ishga tushdi");
 
 function itemTemplate(item) {
-  return `<li
-  class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
-  <span class="item-text">${item.reja}</span>
-  <div>
-    <button
-      data-id="${item._id}"
-      class="edit-me btn btn-secondary btn-sm mr-1">
-      Ozgartirish
-    </button>
-    <button
-      data-id="${item._id}"
-      class="delete-me btn btn-danger btn-sm">
-      Ochirish
-    </button>
-  </div>
-</li>`;
+  return `
+    <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+      <span class="item-text">${item.reja}</span>
+      <div>
+        <button 
+          data-id="${item._id}"
+          class="edit-me btn btn-secondary btn-sm mr-1">
+          O'zgartirish
+        </button>
+        <button
+          data-id="${item._id}"
+          class="delete-me btn btn-danger btn-sm">
+          O'chirish
+        </button>
+      </div>
+    </li>`;
 }
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+document
+  .getElementById("create-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  axios
-    .post("/create-item", { reja: createField.value })
-    .then((response) => {
-      document
-        .getElementById("item-list")
-        .insertAdjacentHTML("beforeend", itemTemplate(response.data));
-      createField.value = "";
-      createField.focus();
-    })
-    .catch((err) => {
-      console.log("PLEASE, Qaytadanb harakat qiling");
-    });
-});
+    axios
+      .post("/create-item", { reja: createField.value })
+      .then((response) => {
+        document
+          .getElementById("item-list")
+          .insertAdjacentHTML("beforeend", itemTemplate(response.data));
+
+        createField.value = "";
+        createField.focus();
+      })
+      .catch(() => {
+        console.log("Iltimos qayta urinib ko'ring!");
+      });
+  });
 
 document.addEventListener("click", function (e) {
-  //delete operatsiylari
-  console.log(e.target); //****/
+  // DELETE
   if (e.target.classList.contains("delete-me")) {
-    if (confirm("aniq o'chirmoqchimisiz?")) {
+    if (confirm("Aniq o‘chirmoqchimisiz?")) {
       axios
-        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .post("/delete-item", {
+          id: e.target.getAttribute("data-id"),
+        })
         .then((response) => {
           console.log(response.data);
-          e.target.parentElement.parentElement.remove();
+          e.target.closest("li").remove();
         })
-        .catch((err) => {
-          console.log("PLEASE, Qaytadanb harakat qiling");
+        .catch(() => {
+          console.log("Iltimos qayta harakat qiling!");
         });
     }
   }
 
+  // EDIT
   if (e.target.classList.contains("edit-me")) {
     let userInput = prompt(
-      "O'zgartirish kiriting",
-      e.target.parentElement.parentElement.querySelector(".item-text")
-        .innerHTML,
+      "Yangi reja kiriting:",
+      e.target.parentElement.previousElementSibling.innerText
     );
+
     if (userInput) {
       axios
-        .post("/edit-item", {
+        .post("/update-item", {
           id: e.target.getAttribute("data-id"),
           new_input: userInput,
         })
-        .then((response) => {
-          // Agar serverdan "success" kelsa, ekrandagi matnni yangilaymiz
-          if (response.data.state === "success") {
-            e.target.parentElement.parentElement.querySelector(
-              ".item-text",
-            ).innerHTML = userInput;
-          }
+        .then(() => {
+          e.target.parentElement.previousElementSibling.innerText = userInput;
         })
-        .catch((err) => {
-          console.log("Iltimos qaytadan harakat qiling!");
+        .catch(() => {
+          console.log("Iltimos qayta harakat qiling!");
         });
     }
   }
 });
-
-document.getElementById("clean-all").addEventListener("click", function () {
-  axios.post("/delete-all", { delete_all: true }).then((response) => {
-    alert(response.data.state);
-    document.location.reload();
-  });
-});
-
