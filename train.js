@@ -1,23 +1,101 @@
 const express = require("express");
 const app = express();
 
+
+
+// ===========================================
+// Mitask *C*
+// ===========================================
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non
+    this.lagmon = lagmon
+    this.cola = cola
+  }
+
+  vaqt() {
+    const d = new Date()
+    let h = d.getHours()
+    let m = d.getMinutes()
+
+    if (h < 10) h = "0" + h
+    if (m < 10) m = "0" + m
+
+    return h + ":" + m
+  }
+
+  qoldiq() {
+    const t = this.vaqt()
+    const msg = "Hozir " + t + "da " + this.non + "ta non, " + this.lagmon + "ta lag'mon va " + this.cola + "ta cola mavjud"
+    console.log(msg)
+    return msg
+  }
+
+  sotish(nomi, soni) {
+    if (nomi == "non") {
+      if (this.non >= soni) {
+        this.non -= soni
+      } else {
+        console.log("non yetarli emas")
+      }
+    } else if (nomi == "lagmon") {
+      if (this.lagmon >= soni) {
+        this.lagmon -= soni
+      } else {
+        console.log("lag'mon yetarli emas")
+      }
+    } else if (nomi == "cola") {
+      if (this.cola >= soni) {
+        this.cola -= soni
+      } else {
+        console.log("cola yetarli emas")
+      }
+    } else {
+      console.log("bunaqa mahsulot yoq")
+    }
+  }
+
+  qabul(nomi, soni) {
+    if (nomi == "non") {
+      this.non += soni
+    } else if (nomi == "lagmon") {
+      this.lagmon += soni
+    } else if (nomi == "cola") {
+      this.cola += soni
+    } else {
+      console.log("bunaqa mahsulot yoq")
+    }
+  }
+}
+
+const shop = new Shop(4, 5, 2)
+
+shop.qoldiq()
+shop.sotish("non", 3)
+shop.qabul("cola", 4)
+shop.qoldiq()
+
+
+
+
 // ===========================================
 // Mitask *B*
 // ===========================================
 
-function getNumberCount(text) {
-  let digitsCount = 0;
+// function getNumberCount(text) {
+//   let digitsCount = 0;
 
-  for (let char of text) {
-    if (!isNaN(char) && char !== " ") {
-      digitsCount++;
-    }
-  }
+//   for (let char of text) {
+//     if (!isNaN(char) && char !== " ") {
+//       digitsCount++;
+//     }
+//   }
 
-  return digitsCount;
-}
+//   return digitsCount;
+// }
 
-console.log(getNumberCount("Abdulloh ID: 20051008"));
+// console.log(getNumberCount("Abdulloh ID: 20051008"));
 
 // =========================================== //
 // MiTask *A*
