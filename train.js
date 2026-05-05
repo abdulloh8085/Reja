@@ -1,80 +1,95 @@
 const express = require("express");
 const app = express();
+// ===========================================
+// Mitask *D*
+// ===========================================
+function checkContent(FirsWord, secondWord) {
+  if (typeof FirsWord !== "string" || typeof secondWord !== "string") return false;
+  if (FirsWord.length !== secondWord.length) return false;
 
+  const tartiblash = (word) =>
+    word.toLowerCase().split("").sort().join("");
+
+  return tartiblash(FirsWord) === tartiblash(secondWord);
+}
+
+// Example
+console.log(checkContent("mitgroup", "gmtiprou"));
 
 
 // ===========================================
 // Mitask *C*
 // ===========================================
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non
-    this.lagmon = lagmon
-    this.cola = cola
-  }
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non
+//     this.lagmon = lagmon
+//     this.cola = cola
+//   }
 
-  vaqt() {
-    const d = new Date()
-    let h = d.getHours()
-    let m = d.getMinutes()
+//   vaqt() {
+//     const d = new Date()
+//     let h = d.getHours()
+//     let m = d.getMinutes()
 
-    if (h < 10) h = "0" + h
-    if (m < 10) m = "0" + m
+//     if (h < 10) h = "0" + h
+//     if (m < 10) m = "0" + m
 
-    return h + ":" + m
-  }
+//     return h + ":" + m
+//   }
 
-  qoldiq() {
-    const t = this.vaqt()
-    const msg = "Hozir " + t + "da " + this.non + "ta non, " + this.lagmon + "ta lag'mon va " + this.cola + "ta cola mavjud"
-    console.log(msg)
-    return msg
-  }
+//   qoldiq() {
+//     const t = this.vaqt()
+//     const msg = "Hozir " + t + "da " + this.non + "ta non, " + this.lagmon + "ta lag'mon va " + this.cola + "ta cola mavjud"
+//     console.log(msg)
+//     return msg
+//   }
 
-  sotish(nomi, soni) {
-    if (nomi == "non") {
-      if (this.non >= soni) {
-        this.non -= soni
-      } else {
-        console.log("non yetarli emas")
-      }
-    } else if (nomi == "lagmon") {
-      if (this.lagmon >= soni) {
-        this.lagmon -= soni
-      } else {
-        console.log("lag'mon yetarli emas")
-      }
-    } else if (nomi == "cola") {
-      if (this.cola >= soni) {
-        this.cola -= soni
-      } else {
-        console.log("cola yetarli emas")
-      }
-    } else {
-      console.log("bunaqa mahsulot yoq")
-    }
-  }
+//   sotish(nomi, soni) {
+//     if (nomi == "non") {
+//       if (this.non >= soni) {
+//         this.non -= soni
+//       } else {
+//         console.log("non yetarli emas")
+//       }
+//     } else if (nomi == "lagmon") {
+//       if (this.lagmon >= soni) {
+//         this.lagmon -= soni
+//       } else {
+//         console.log("lag'mon yetarli emas")
+//       }
+//     } else if (nomi == "cola") {
+//       if (this.cola >= soni) {
+//         this.cola -= soni
+//       } else {
+//         console.log("cola yetarli emas")
+//       }
+//     } else {
+//       console.log("bunaqa mahsulot yoq")
+//     }
+//   }
 
-  qabul(nomi, soni) {
-    if (nomi == "non") {
-      this.non += soni
-    } else if (nomi == "lagmon") {
-      this.lagmon += soni
-    } else if (nomi == "cola") {
-      this.cola += soni
-    } else {
-      console.log("bunaqa mahsulot yoq")
-    }
-  }
-}
+//   qabul(nomi, soni) {
+//     if (nomi == "non") {
+//       this.non += soni
+//     } else if (nomi == "lagmon") {
+//       this.lagmon += soni
+//     } else if (nomi == "cola") {
+//       this.cola += soni
+//     } else {
+//       console.log("bunaqa mahsulot yoq")
+//     }
+//   }
+// }
 
-const shop = new Shop(4, 5, 2)
+// const shop = new Shop(4, 5, 2)
 
-shop.qoldiq()
-shop.sotish("non", 3)
-shop.qabul("cola", 4)
-shop.qoldiq()
+// shop.qoldiq()
+// shop.sotish("non", 3)
+// shop.qabul("cola", 4)
+// shop.qoldiq()
+
 
 
 

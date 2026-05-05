@@ -12,9 +12,52 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous"
   >
+
+  <!-- INTERNAL CSS -->
+  <style>
+    body {
+      background: #000;
+      color: #00ff9f;
+      font-family: monospace;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "010101010101010101010101010101010101010101010101";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      font-size: 14px;
+      color: rgba(0,255,100,0.07);
+      white-space: pre;
+      animation: matrixMove 8s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes matrixMove {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    .hacker-emoji {
+      position: fixed;
+      top: -50px;
+      font-size: 18px;
+      opacity: 2;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
 </head>
 
-<body style="background-color: #b8bbd1;">
+<body>
     <div class="container">
         <h1 class="display-4 text-center py-1"> REJA VA MAQSADLAR</h1>
 
@@ -59,8 +102,30 @@
       </li>
       <% }) %> 
       </ul>
+        <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
+            Barcha rejalarni o'chirish
+        </button>
     </div>
+
+    <!-- Emoji layer -->
+    <div id="emoji-container"></div>
+    <script>
+      const emojis = ["💻","🧠","🔐","⚠️","📡","🕶️","💀","👾","🧑‍💻"];
+      const container = document.getElementById("emoji-container");
+
+      for (let i = 0; i < 15; i++) {
+        const el = document.createElement("span");
+        el.className = "hacker-emoji";
+        el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+        el.style.left = Math.random() * 100 + "vw";
+        el.style.animationDuration = (5 + Math.random() * 10) + "s";
+
+        container.appendChild(el);
+      }
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-<script src="/browser.js"></script>
+    <script src="/browser.js"></script>
 </body>
 </html>
