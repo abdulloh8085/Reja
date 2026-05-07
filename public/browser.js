@@ -8,10 +8,10 @@ function itemTemplate(item) {
                     </span>
                     <div>
                         <button data-id="${item._id}" class="edit-me btn btn-secondary btn-sm mr-1">
-                            O'zgartirish kiritish
+                            O'zgartirish 
                         </button>
                         <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">
-                         Rejani o'chirish
+                        O'chirish
                         </button>
                     </div>
                 </li>`; 
