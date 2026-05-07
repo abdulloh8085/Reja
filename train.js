@@ -1,20 +1,37 @@
 const express = require("express");
 const app = express();
-// ===========================================
-// Mitask *D*
-// ===========================================
-function checkContent(FirsWord, secondWord) {
-  if (typeof FirsWord !== "string" || typeof secondWord !== "string") return false;
-  if (FirsWord.length !== secondWord.length) return false;
 
-  const tartiblash = (word) =>
-    word.toLowerCase().split("").sort().join("");
 
-  return tartiblash(FirsWord) === tartiblash(secondWord);
+// // ===========================================
+// // Mitask *E*
+// // ===========================================
+function getReverse(str) {
+  return str.split('').reverse().join('');
 }
 
-// Example
-console.log(checkContent("mitgroup", "gmtiprou"));
+// Testing
+console.log(getReverse("hello"));  
+console.log(getReverse("salomaaat"));  
+console.log(getReverse("JavaScript zo'r")); 
+
+
+
+
+// // ===========================================
+// // Mitask *D*
+// // ===========================================
+// function checkContent(FirsWord, secondWord) {
+//   if (typeof FirsWord !== "string" || typeof secondWord !== "string") return false;
+//   if (FirsWord.length !== secondWord.length) return false;
+
+//   const tartiblash = (word) =>
+//     word.toLowerCase().split("").sort().join("");
+
+//   return tartiblash(FirsWord) === tartiblash(secondWord);
+// }
+
+// // Example
+// console.log(checkContent("mitgroup", "gmtiprou"));
 
 
 // ===========================================
