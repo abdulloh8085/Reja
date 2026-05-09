@@ -2,17 +2,46 @@ const express = require("express");
 const app = express();
 
 
+
+// // ===========================================>>>
+// // Mitask *E*
+// // ===========================================>>>
+
+// MITASK F
+
+function findDoublers(text) {
+
+    text = text.toLowerCase();
+
+    for(let i = 0; i < text.length; i++) {
+
+        for(let j = i + 1; j < text.length; j++) {
+
+            if(text[i] == text[j]) {
+                return true;
+            }
+
+        }
+
+    }
+
+    return false;
+
+}
+
+console.log(findDoublers("World"));
+console.log(findDoublers("Hello"));
 // // ===========================================
 // // Mitask *E*
 // // ===========================================
-function getReverse(str) {
-  return str.split('').reverse().join('');
-}
+// function getReverse(str) {
+//   return str.split('').reverse().join('');
+// }
 
-// Testing
-console.log(getReverse("hello"));  
-console.log(getReverse("salomaaat"));  
-console.log(getReverse("JavaScript zo'r")); 
+// // Testing
+// console.log(getReverse("hello"));  
+// console.log(getReverse("salomaaat"));  
+// console.log(getReverse("JavaScript zo'r")); 
 
 
 
