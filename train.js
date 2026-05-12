@@ -1,13 +1,45 @@
 const express = require("express");
 const app = express();
 
+// // ===========================================>>>
+// // Mitask *G*
+// // ===========================================>>>
+function getHighestIndex(numbers) {
 
+    let highest = numbers[0];
+    let highestIndex = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+
+        if (numbers[i] > highest) {
+            highest = numbers[i];
+            highestIndex = i;
+        }
+
+    }
+
+    return highestIndex;
+}
+
+
+let numbers1 = [5, 21, 12, 21, 8];
+console.log(getHighestIndex(numbers1));
+
+let numbers2 = [1, 2, 3, 4, 5];
+console.log(getHighestIndex(numbers2));
+
+let numbers3 = [99, 12, 45, 67];
+console.log(getHighestIndex(numbers3));
+
+let numbers4 = [7, 7, 7, 7];
+console.log(getHighestIndex(numbers4));
+
+let numbers5 = [-5, -1, -9, -3];
+console.log(getHighestIndex(numbers5));
 
 // // ===========================================>>>
-// // Mitask *E*
+// // Mitask *F*
 // // ===========================================>>>
-
-// MITASK F
 
 function findDoublers(text) {
 
