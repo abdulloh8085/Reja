@@ -1,10 +1,42 @@
 const express = require("express");
 const app = express();
 
-// // ===========================================>>>
-// // Mitask *G*
-// // ===========================================>>>
-function getHighestIndex(numbers) {
+// ===========================================>>>
+// Mitask *H*
+// ===========================================>>>
+
+function getPositive(numbers) {
+
+    let positiveNumbers = "";
+
+    for (let i = 0; i < numbers.length; i++) {
+
+        let currentNumber = numbers[i];
+
+        if (currentNumber > 0) {
+
+            positiveNumbers += currentNumber;
+        }
+    }
+
+    return positiveNumbers;
+}
+
+
+// Testing
+console.log(getPositive([1, -4, 2]));           
+
+console.log(getPositive([-2, 3, 8, -9, 7, 6]));
+
+
+console.log(getPositive([5, -1, 9, 0, -7]));
+
+
+
+// ===========================================>>>
+// Mitask *G*
+// ===========================================>>>
+/*function getHighestIndex(numbers) {
 
     let highest = numbers[0];
     let highestIndex = 0;
@@ -36,6 +68,7 @@ console.log(getHighestIndex(numbers4));
 
 let numbers5 = [-5, -1, -9, -3];
 console.log(getHighestIndex(numbers5));
+*/
 
 // // ===========================================>>>
 // // Mitask *F*
