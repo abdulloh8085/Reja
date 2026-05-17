@@ -2,34 +2,64 @@ const express = require("express");
 const app = express();
 
 // ===========================================>>>
-// Mitask *H*
+// Mitask *I*
 // ===========================================>>>
-
-function getPositive(numbers) {
-
-    let positiveNumbers = "";
+function findMostRepeated(numbers) {
+    let maxCount = 0;
+    let mostRepeated = numbers[0];
 
     for (let i = 0; i < numbers.length; i++) {
+        let count = 0;
 
-        let currentNumber = numbers[i];
+        for (let j = 0; j < numbers.length; j++) {
+            if (numbers[i] === numbers[j]) {
+                count++;
+            }
+        }
 
-        if (currentNumber > 0) {
-
-            positiveNumbers += currentNumber;
+        if (count > maxCount) {
+            maxCount = count;
+            mostRepeated = numbers[i];
         }
     }
 
-    return positiveNumbers;
+    return mostRepeated;
 }
+
+const nums = [1, 2, 3, 4, 5, 4, 3, 4];
+
+console.log(findMostRepeated(nums)); // 4
+
+
+
+// ===========================================>>>
+// Mitask *H*
+// ===========================================>>>
+
+// function getPositive(numbers) {
+
+//     let positiveNumbers = "";
+
+//     for (let i = 0; i < numbers.length; i++) {
+
+//         let currentNumber = numbers[i];
+
+//         if (currentNumber > 0) {
+
+//             positiveNumbers += currentNumber;
+//         }
+//     }
+
+//     return positiveNumbers;
+// }
 
 
 // Testing
-console.log(getPositive([1, -4, 2]));           
+// console.log(getPositive([1, -4, 2]));           
 
-console.log(getPositive([-2, 3, 8, -9, 7, 6]));
+// console.log(getPositive([-2, 3, 8, -9, 7, 6]));
 
-
-console.log(getPositive([5, -1, 9, 0, -7]));
+// console.log(getPositive([5, -1, 9, 0, -7]));
 
 
 
