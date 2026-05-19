@@ -2,6 +2,25 @@ const express = require("express");
 const app = express();
 
 // ===========================================>>>
+// Mitask *J*
+// ===========================================>>>
+
+function findLongestWord(text) {
+    let words = text.split(" ");
+    let longestWord = "";
+
+    for (let word of words) {
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    }
+
+    return longestWord;
+}
+
+console.log(findLongestWord("I came from Uzbekistan!"));
+
+// ===========================================>>>
 // Mitask *I*
 // ===========================================>>>
 function findMostRepeated(numbers) {
