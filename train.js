@@ -2,52 +2,72 @@ const express = require("express");
 const app = express();
 
 // ===========================================>>>
-// Mitask *J*
+// Mitask *k*
 // ===========================================>>>
 
-function findLongestWord(text) {
-    let words = text.split(" ");
-    let longestWord = "";
+function countVowels(str) {
+    let count = 0;
+    let vowels = "aeiou";
 
-    for (let word of words) {
-        if (word.length > longestWord.length) {
-            longestWord = word;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i].toLowerCase())) {
+            count++;
         }
     }
 
-    return longestWord;
+    return count;
 }
 
-console.log(findLongestWord("I came from Uzbekistan!"));
+console.log(countVowels("string")); // 1
+console.log(countVowels("hello"));  // 2
 
 // ===========================================>>>
 // Mitask *I*
 // ===========================================>>>
-function findMostRepeated(numbers) {
-    let maxCount = 0;
-    let mostRepeated = numbers[0];
 
-    for (let i = 0; i < numbers.length; i++) {
-        let count = 0;
+// function findLongestWord(text) {
+//     let words = text.split(" ");
+//     let longestWord = "";
 
-        for (let j = 0; j < numbers.length; j++) {
-            if (numbers[i] === numbers[j]) {
-                count++;
-            }
-        }
+//     for (let word of words) {
+//         if (word.length > longestWord.length) {
+//             longestWord = word;
+//         }
+//     }
 
-        if (count > maxCount) {
-            maxCount = count;
-            mostRepeated = numbers[i];
-        }
-    }
+//     return longestWord;
+// }
 
-    return mostRepeated;
-}
+// console.log(findLongestWord("I came from Uzbekistan!"));
 
-const nums = [1, 2, 3, 4, 5, 4, 3, 4];
+// ===========================================>>>
+// Mitask *I*
+// ===========================================>>>
+// function findMostRepeated(numbers) {
+//     let maxCount = 0;
+//     let mostRepeated = numbers[0];
 
-console.log(findMostRepeated(nums)); // 4
+//     for (let i = 0; i < numbers.length; i++) {
+//         let count = 0;
+
+//         for (let j = 0; j < numbers.length; j++) {
+//             if (numbers[i] === numbers[j]) {
+//                 count++;
+//             }
+//         }
+
+//         if (count > maxCount) {
+//             maxCount = count;
+//             mostRepeated = numbers[i];
+//         }
+//     }
+
+//     return mostRepeated;
+// }
+
+// const nums = [1, 2, 3, 4, 5, 4, 3, 4];
+
+// console.log(findMostRepeated(nums)); // 4
 
 
 
